@@ -1,0 +1,29 @@
+header h1{
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+#inp{
+    padding: 10px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    outline: none;
+    color: aliceblue;
+    background: transparent;
+    margin: 5px;
+}
+
+#chart{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#data{
+    margin-top: 10px;
+    padding: 10px;
+}
