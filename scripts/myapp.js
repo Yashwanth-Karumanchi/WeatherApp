@@ -6,8 +6,8 @@ function myapp(city){
 
     wNow.then((res) => {
         res.json().then((data) => {
-            temp_max = Number(data.main.temp_max)-273.15
-            temp_min = Number(data.main.temp_min)-273.15
+            temp_max = data.main.temp_max-273.15
+            temp_min = data.main.temp_min-273.15
             brief.innerHTML = "Country: "+data.sys.country
                                 +"<br>Maximum Temp: "+String(temp_max.toFixed(2))
                                 +"<br>Minimum Temp: "+String(temp_min.toFixed(2))+"<br>";
@@ -22,9 +22,8 @@ function myapp(city){
                 
             for(let i = 0; i < data.list.length; i+=8){
                 dates.push(data.list[i].dt_txt.split(" ")[0]);
-                temps.push(Number(Number((data.list[i].main.temp) - 273.15).toFixed(2)));
+                temps.push(data.list[i].main.temp - 273.15.toFixed(2));
             }
-            console.log(dates[0])
             plot(dates, temps)
         })
     })
